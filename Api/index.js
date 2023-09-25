@@ -10,7 +10,7 @@ const cookieParser = require('cookie-parser');
 const Cart = require('./Models/CartItems')
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({credentials:true,origin:'http://localhost:5173'}));
+app.use(cors({credentials:true,origin:'http://swiggy2031.netlify.app'}));
 const salt = bcrypt.genSaltSync(10);
 const secret = "aw23ewrdswwej322ssww21";
 mongoose.connect("mongodb+srv://midhun:midhun123@cluster0.mr3s84c.mongodb.net/")
