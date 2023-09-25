@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins&family=Roboto&display=swap');
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif
+}
+html{
+  scroll-behavior: smooth;
+}
+.login{
+  position: relative;
+}
+.login::before{
+  content: '';
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  inset: 0;
+  z-index: -1;
+  background-image: url(../src/assets/bg.jpg);
+  background-position: center;
+  background-size:cover;
+  opacity: 0.6;
+}
+.login-header::after{
+  content:'';
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  background-color:black;
+  bottom:0;
+}
+/* In your CSS file or in a CSS module */
+.sign-button {
+  background: linear-gradient(90deg, rgba(255, 173, 0, 0.7) 0%, rgba(255, 69, 0, 0.7) 50%, rgba(255, 69, 0, 0.7) 50%, rgba(255, 173, 0, 0.7) 100%);
+  background-size: 200% 100%;
+  transition: background-position 0.5s;
+}
+
+.sign-button:hover {
+  background-position: -100% 0;
+}
+.foods{
+  
+  font-weight: 500;
+  color:#3D4152;
+}
+.foods input{
+  
+  color:#3D4152;
+}
+.hamburger-menu {
+  position: absolute;
+  top: 2rem;
+  right: 4rem;
+  cursor: pointer;
+  transform: scale(1);
+}
+.nav-items h1{
+  padding: 12px 0;
+  
+  display: flex;
+  font-weight: 600;
+}
+.nav-items{
+  opacity: 0;
+  transition: opacity;
+  transition-duration: 2s;
+  
+}
+.nav-items.active{
+  opacity: 1;
+}
+.btn-div::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content:'';
+  inset: 0;
+  background:#fff;
+  opacity: 0;
+}
+.btn-div{
+  transition: all 1s;
+}
+.btn-div:hover::before{
+  opacity: 0.3;
+}
+.card-img button{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color:green;
+  color:#fff;
+  padding: 6px 14px;
+  border-radius: 5px;
+  opacity: 0;
+}
+.card-img button:hover{
+  opacity: 1;
+}
+.btn-div:hover + button{
+  opacity: 1;
+}
